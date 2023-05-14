@@ -1,118 +1,229 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { projectData } from "@/data/data";
+import { Inter, Work_Sans } from "next/font/google";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import { ReactNode } from "react";
+import { AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
+import { AiOutlineMail } from "react-icons/ai";
+import { BiLinkExternal } from "react-icons/bi";
+import { motion } from "framer-motion";
+const ws = Work_Sans({
+    subsets: ["latin"],
+});
 
 export default function Home() {
-  return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    return (
+        <>
+            <Head>
+                <title>Shyamanand Yadav - FullStack Devloper</title>
+            </Head>
+            <main
+                className={` text-white min-h-screen bg-zinc-900  ${ws.className} `}
+            >
+                <Container>
+                    <section className="sm:pt-32 pt-20 p-5">
+                        <motion.div
+                            initial={{ opacity: 0, zoom: 0 }}
+                            animate={{ opacity: 1, zoom: 1 }}
+                        >
+                            <Image
+                                src="/profile.jpg"
+                                alt="profile"
+                                width={64}
+                                height={64}
+                                priority
+                                className="rounded-full  object-cover h-16 w-16 transition-all hover:-rotate-12"
+                            />
+                        </motion.div>
+                        <article className="mt-3 ">
+                            <motion.h1
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="sm:text-6xl text-4xl font-thin tracking-tight"
+                            >
+                                Shyamanand Yadav
+                            </motion.h1>
+                            <motion.h2
+                                transition={{ delay: 0.2 }}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="sm:text-3xl text-xl uppercase tracking-tight mt-1"
+                            >
+                                Fullstack Developer
+                            </motion.h2>
+                            <motion.p
+                                transition={{ delay: 0.5 }}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="text-zinc-400 mt-6 "
+                            >
+                                I am a fullstack developer with over 1 year of experience in
+                                building web applications. I am passionate about building
+                                scalable and maintainable web applications.
+                            </motion.p>
+                        </article>
+                        <motion.article
+                            transition={{ delay: 0.7 }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            className="mt-6"
+                        >
+                            <div className="flex gap-3 items-center">
+                                <Link href="mailto:shyamayadav154@gmail.com">
+                                    <AiOutlineMail className="h-7 w-7 text-zinc-300 transition-all hover:scale-125 hover:text-zinc-100" />
+                                </Link>
+                                <Link target="_blank" href="https://github.com/shyamayadav154">
+                                    <AiFillGithub className="h-7 w-7 text-zinc-300 transition-all hover:scale-125 hover:text-zinc-100" />
+                                </Link>
+                                <Link
+                                    target="_blank"
+                                    href="https://www.linkedin.com/in/shyamayadav154/"
+                                >
+                                    <AiFillLinkedin className="h-7 w-7 transition-all hover:scale-125 text-zinc-300 hover:text-zinc-100" />
+                                </Link>
+                            </div>
+                            <button className="px-7 mt-3 font-medium py-2 hover:bg-zinc-600 -ml-2 rounded-lg bg-zinc-700">
+                                Resume
+                            </button>
+                        </motion.article>
+                    </section>
+                    <ProjectSection />
+                </Container>
+                <Footer />
+            </main>
+        </>
+    );
 }
+
+const Footer = () => {
+    return (
+        <footer className=" bg-black border-zinc-600 rounded-t-3xl mt-32 py-10">
+            <Container>
+                <article className="grid place-content-center">
+                    <h3 className="text-3xl text-center">
+                        <span className="font-thin">
+                            Get&nbsp;
+                        </span>
+                        in Touch.
+                    </h3>
+                    <p className="font-thin mt-1">
+                        So that we can talk more about...
+                    </p>
+                </article>
+                <article className="flex justify-center gap-3 mt-10 items-center">
+                    <Link href="mailto:shyamayadav154@gmail.com">
+                        <AiOutlineMail className="h-7 w-7 text-zinc-300 transition-all hover:scale-125 hover:text-zinc-100" />
+                    </Link>
+                    <Link target="_blank" href="https://github.com/shyamayadav154">
+                        <AiFillGithub className="h-7 w-7 text-zinc-300 transition-all hover:scale-125 hover:text-zinc-100" />
+                    </Link>
+                    <Link
+                        target="_blank"
+                        href="https://www.linkedin.com/in/shyamayadav154/"
+                    >
+                        <AiFillLinkedin className="h-7 w-7 transition-all hover:scale-125 text-zinc-300 hover:text-zinc-100" />
+                    </Link>
+                </article>
+                <article className="grid place-content-center mt-10">
+                    <div>
+                        <span className="font-thin">
+                            Made with ❤️ by &nbsp;
+                        </span>
+                        Shyamanand Yadav
+                    </div>
+                </article>
+            </Container>
+        </footer>
+    );
+};
+
+const ProjectSection = () => {
+    return (
+        <section className="mt-24 m-5">
+            <h2 className="text-4xl  bg-zinc-900 sticky top-0 py-5  ">
+                <span className="font-thin">
+                    Personal
+                </span>
+                &nbsp;
+                <span>
+                    Projects
+                </span>
+            </h2>
+            <article className="space-y-10 ">
+                {projectData.map((project, index) => (
+                    <ProjectCard key={index} project={project} />
+                ))}
+            </article>
+        </section>
+    );
+};
+
+type ProjectCardProps = typeof projectData[0];
+
+const ProjectCard = ({ project }: {
+    project: ProjectCardProps;
+}) => {
+    return (
+        <article className="rounded-xl text-zinc-300 flex p-3 flex-col justify-between bg-zinc-800  overflow-hidden gap-6">
+            <section>
+                <Image
+                    src={project.img}
+                    width={500}
+                    className="flex-1 mx-auto w-full rounded-lg"
+                    height={300}
+                    alt={project.title}
+                />
+                <div className="mt-6">
+                    <h3 className="text-2xl text-zinc-100 font-medium flex items-center">
+                        {project.title}
+                        <span className="font-thin text-base">
+                            &nbsp;(built using MERN stack)
+                        </span>
+                    </h3>
+
+                    <p className="leading-tight mt-1">
+                        {project.desc}
+                    </p>
+                </div>
+                <div className="mt-2">
+                    <span className="text-zinc-100 font-thin text-xl">
+                        Features
+                    </span>
+                    <ul className="list-disc ml-6">
+                        {project.features.map((feature) => (
+                            <li key={feature.id}>
+                                {feature.name}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </section>
+            <section className="m-2 flex justify-end gap-6">
+                <Link
+                    target="_blank"
+                    className="px-4 py-1.5 text-zinc-400 hover:text-zinc-300 hover:underline rounded"
+                    href={project.repo}
+                >
+                    Source code
+                </Link>
+                <Link
+                    target="_blank"
+                    className="px-4 hover:bg-zinc-600 hover:underline py-1.5 bg-zinc-700 rounded flex items-center gap-2"
+                    href={project.url}
+                >
+                    Live<BiLinkExternal />
+                </Link>
+            </section>
+        </article>
+    );
+};
+
+const Container = ({ children }: { children: ReactNode }) => {
+    return (
+        <section className="w-full sm:max-w-xl mx-auto">
+            {children}
+        </section>
+    );
+};
