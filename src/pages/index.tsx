@@ -141,7 +141,7 @@ const Footer = () => {
 
 const ProjectSection = () => {
     return (
-        <section className="mt-24 m-5">
+        <motion.section transition={{delay:1.2}} initial={{opacity:0}} animate={{opacity:1}} className="mt-24 m-5">
             <h2 className="text-4xl  bg-zinc-900 sticky top-0 py-5  ">
                 <span className="font-thin">
                     Personal
@@ -156,7 +156,7 @@ const ProjectSection = () => {
                     <ProjectCard key={index} project={project} />
                 ))}
             </article>
-        </section>
+        </motion.section>
     );
 };
 
