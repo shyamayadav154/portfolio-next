@@ -102,13 +102,13 @@ const Footer = () => {
         <footer className=" bg-black border-zinc-600 rounded-t-3xl mt-32 py-10">
             <Container>
                 <article className="grid place-content-center">
-                    <h3 className="text-3xl text-center">
+                    <h3 className="sm:text-5xl text-3xl text-center">
                         <span className="font-thin">
                             Get&nbsp;
                         </span>
                         in Touch.
                     </h3>
-                    <p className="font-thin mt-1">
+                    <p className="font-thin mt-1 text-center ">
                         So that we can talk more about...
                     </p>
                 </article>
@@ -166,8 +166,8 @@ const ProjectCard = ({ project }: {
     project: ProjectCardProps;
 }) => {
     return (
-        <article className="rounded-xl text-zinc-300 flex p-3 flex-col justify-between bg-zinc-800  overflow-hidden gap-6">
-            <section>
+        <article className="rounded-xl text-zinc-300 flex  flex-col justify-between bg-zinc-800  overflow-hidden gap-6">
+            <section className="p-3">
                 <Image
                     src={project.img}
                     width={500}
@@ -191,16 +191,16 @@ const ProjectCard = ({ project }: {
                     <span className="text-zinc-100 font-thin text-xl">
                         Features
                     </span>
-                    <ul className="list-disc ml-6">
+                    <ul className="list-disc ml-6 ">
                         {project.features.map((feature) => (
-                            <li key={feature.id}>
+                            <li key={feature.id} className="leading-tight">
                                 {feature.name}
                             </li>
                         ))}
                     </ul>
                 </div>
             </section>
-            <section className="m-2 flex justify-end gap-6">
+            <section className="p-4 border-t border-zinc-600 flex justify-end gap-6">
                 <Link
                     target="_blank"
                     className="px-4 py-1.5 text-zinc-400 hover:text-zinc-300 hover:underline rounded"
@@ -210,10 +210,10 @@ const ProjectCard = ({ project }: {
                 </Link>
                 <Link
                     target="_blank"
-                    className="px-4 hover:bg-zinc-600 hover:underline py-1.5 bg-zinc-700 rounded flex items-center gap-2"
+                    className="px-4 hover:bg-zinc-600 hover:underline py-2 bg-zinc-700 rounded flex items-center gap-2"
                     href={project.url}
                 >
-                    Live<BiLinkExternal />
+                    Demo<BiLinkExternal />
                 </Link>
             </section>
         </article>

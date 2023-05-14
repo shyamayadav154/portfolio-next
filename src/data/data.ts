@@ -63,7 +63,7 @@ export const projectData = [
       { id: 2, name: 'Search And Add Movies to your list' },
       {
         id: 3,
-        name: 'See Movie Details (e.g: Trailer,Description,Rating,Casts',
+        name: 'Shows movie details like Trailer, Description, Rating, Casts',
       },
     ],
     techStacks: [
