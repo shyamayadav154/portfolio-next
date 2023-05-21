@@ -1,5 +1,5 @@
 import { projectData } from "@/data/data";
-import { Inter, Work_Sans } from "next/font/google";
+import {  Work_Sans } from "next/font/google";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 const ws = Work_Sans({
     subsets: ["latin"],
 });
+const resumeLink = 'https://drive.google.com/file/d/1cAW_IFir5b6nQAY7tbySoRrgu899WbWY/view?usp=sharing'
 
 export default function Home() {
     return (
@@ -23,72 +24,7 @@ export default function Home() {
                 className={` text-white min-h-screen bg-zinc-900  ${ws.className} `}
             >
                 <Container>
-                    <section className="sm:pt-32 pt-20 p-5">
-                        <motion.div
-                            initial={{ opacity: 0, zoom: 0 }}
-                            animate={{ opacity: 1, zoom: 1 }}
-                        >
-                            <Image
-                                src="/profile.jpg"
-                                alt="profile"
-                                width={64}
-                                height={64}
-                                priority
-                                className="rounded-full  object-cover h-16 w-16 transition-all hover:-rotate-12"
-                            />
-                        </motion.div>
-                        <article className="mt-3 ">
-                            <motion.h1
-                                initial={{ opacity: 0, y: 10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                className="sm:text-6xl text-4xl font-thin tracking-tight"
-                            >
-                                Shyamanand Yadav
-                            </motion.h1>
-                            <motion.h2
-                                transition={{ delay: 0.2 }}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                className="sm:text-3xl text-xl uppercase tracking-tight mt-1"
-                            >
-                                Fullstack Developer
-                            </motion.h2>
-                            <motion.p
-                                transition={{ delay: 0.5 }}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                className="text-zinc-400 mt-6 "
-                            >
-                                I am a fullstack developer with over 1 year of experience in
-                                building web applications. I am passionate about building
-                                scalable and maintainable web applications.
-                            </motion.p>
-                        </article>
-                        <motion.article
-                            transition={{ delay: 0.7 }}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            className="mt-6"
-                        >
-                            <div className="flex gap-3 items-center">
-                                <Link href="mailto:shyamayadav154@gmail.com">
-                                    <AiOutlineMail className="h-7 w-7 text-zinc-300 transition-all hover:scale-125 hover:text-zinc-100" />
-                                </Link>
-                                <Link target="_blank" href="https://github.com/shyamayadav154">
-                                    <AiFillGithub className="h-7 w-7 text-zinc-300 transition-all hover:scale-125 hover:text-zinc-100" />
-                                </Link>
-                                <Link
-                                    target="_blank"
-                                    href="https://www.linkedin.com/in/shyamayadav154/"
-                                >
-                                    <AiFillLinkedin className="h-7 w-7 transition-all hover:scale-125 text-zinc-300 hover:text-zinc-100" />
-                                </Link>
-                            </div>
-                            <button className="px-7 mt-3 font-medium py-2 hover:bg-zinc-600 -ml-2 rounded-lg bg-zinc-700">
-                                Resume
-                            </button>
-                        </motion.article>
-                    </section>
+                    <HeroSection />
                     <ProjectSection />
                 </Container>
                 <Footer />
@@ -96,6 +32,77 @@ export default function Home() {
         </>
     );
 }
+
+const HeroSection = () => {
+    return (
+        <section className="sm:pt-32 sm:max-w-xl mx-auto pt-20 p-5">
+            <motion.div
+                initial={{ opacity: 0, zoom: 0 }}
+                animate={{ opacity: 1, zoom: 1 }}
+            >
+                <Image
+                    src="/profile.jpg"
+                    alt="profile"
+                    width={64}
+                    height={64}
+                    priority
+                    className="rounded-full  object-cover h-16 w-16 transition-all hover:-rotate-12"
+                />
+            </motion.div>
+            <article className="mt-3 ">
+                <motion.h1
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="sm:text-6xl text-4xl font-thin tracking-tight"
+                >
+                    Shyamanand Yadav
+                </motion.h1>
+                <motion.h2
+                    transition={{ delay: 0.2 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="sm:text-3xl text-xl uppercase tracking-tight mt-1"
+                >
+                    Fullstack Developer
+                </motion.h2>
+                <motion.p
+                    transition={{ delay: 0.5 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-zinc-400 mt-6 "
+                >
+                    I am a fullstack developer with over 1 year of experience in building
+                    web applications. I am passionate about building scalable and
+                    maintainable web applications.
+                </motion.p>
+            </article>
+            <motion.article
+                transition={{ delay: 0.7 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="mt-6"
+            >
+                <div className="flex gap-3 items-center">
+                    <Link href="mailto:shyamayadav154@gmail.com">
+                        <AiOutlineMail className="h-7 w-7 text-zinc-300 transition-all hover:scale-125 hover:text-zinc-100" />
+                    </Link>
+                    <Link target="_blank" href="https://github.com/shyamayadav154">
+                        <AiFillGithub className="h-7 w-7 text-zinc-300 transition-all hover:scale-125 hover:text-zinc-100" />
+                    </Link>
+                    <Link
+                        target="_blank"
+                        href="https://www.linkedin.com/in/shyamayadav154/"
+                    >
+                        <AiFillLinkedin className="h-7 w-7 transition-all hover:scale-125 text-zinc-300 hover:text-zinc-100" />
+                    </Link>
+                </div>
+                <Link target="_blank" href={resumeLink} className="px-7 inline-block mt-3 font-medium py-2 hover:bg-zinc-600 -ml-2 rounded-lg bg-zinc-700">
+                    Resume
+                </Link>
+            </motion.article>
+        </section>
+    );
+};
 
 const Footer = () => {
     return (
@@ -141,8 +148,13 @@ const Footer = () => {
 
 const ProjectSection = () => {
     return (
-        <motion.section transition={{delay:1.2}} initial={{opacity:0}} animate={{opacity:1}} className="mt-24 m-5">
-            <h2 className="text-4xl  bg-zinc-900 sticky top-0 py-5  ">
+        <motion.section
+            transition={{ delay: 1.2 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="mt-24 m-5"
+        >
+            <h2 className="text-4xl text-center  bg-zinc-900 sticky top-0 py-5  ">
                 <span className="font-thin">
                     Personal
                 </span>
@@ -151,7 +163,7 @@ const ProjectSection = () => {
                     Projects
                 </span>
             </h2>
-            <article className="space-y-10 ">
+            <article className="gap-5 grid pt-5 md:grid-cols-2 ">
                 {projectData.map((project, index) => (
                     <ProjectCard key={index} project={project} />
                 ))}
@@ -166,12 +178,12 @@ const ProjectCard = ({ project }: {
     project: ProjectCardProps;
 }) => {
     return (
-        <article className="rounded-xl text-zinc-300 flex  flex-col justify-between bg-zinc-800  overflow-hidden gap-6">
-            <section className="p-3">
+        <article className="rounded-xl p-5  text-zinc-300 flex  flex-col justify-between bg-zinc-800  overflow-hidden ">
+            <section className="pb-5">
                 <Image
                     src={project.img}
                     width={500}
-                    className="flex-1 mx-auto w-full rounded-lg"
+                    className="flex-1 aspect-[16/10] object-left-top object-cover mx-auto w-full rounded-lg"
                     height={300}
                     alt={project.title}
                 />
@@ -179,25 +191,25 @@ const ProjectCard = ({ project }: {
                     <h3 className="text-2xl text-zinc-100 font-medium flex items-center">
                         {project.title}
                         <span className="font-thin text-base">
-                            &nbsp;(built using MERN stack)
+                            &nbsp;
                         </span>
                     </h3>
+                    <section className="py-2">
+                        <ul role="skills" className="flex gap-2 flex-wrap">
+                            {project.techStacks.map((skill) => (
+                                <li
+                                    className="px-2 py-1 text-gray-200 whitespace-nowrap bg-zinc-700 rounded"
+                                    key={skill.id}
+                                >
+                                    {skill.name}
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
 
                     <p className="leading-tight mt-1">
                         {project.desc}
                     </p>
-                </div>
-                <div className="mt-2">
-                    <span className="text-zinc-100 font-thin text-xl">
-                        Features
-                    </span>
-                    <ul className="list-disc ml-6 ">
-                        {project.features.map((feature) => (
-                            <li key={feature.id} className="leading-tight">
-                                {feature.name}
-                            </li>
-                        ))}
-                    </ul>
                 </div>
             </section>
             <section className="p-4 border-t border-zinc-600 flex justify-end gap-6">
@@ -210,7 +222,7 @@ const ProjectCard = ({ project }: {
                 </Link>
                 <Link
                     target="_blank"
-                    className="px-4 hover:bg-zinc-600 hover:underline py-2 bg-zinc-700 rounded flex items-center gap-2"
+                    className="px-4 transition-colors duration-200 hover:bg-zinc-600 hover:underline py-2 bg-zinc-700 rounded flex items-center gap-2"
                     href={project.url}
                 >
                     Demo<BiLinkExternal />
@@ -222,7 +234,7 @@ const ProjectCard = ({ project }: {
 
 const Container = ({ children }: { children: ReactNode }) => {
     return (
-        <section className="w-full sm:max-w-xl mx-auto">
+        <section className="w-full lg:max-w-6xl mx-auto ">
             {children}
         </section>
     );
