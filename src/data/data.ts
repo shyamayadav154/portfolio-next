@@ -10,6 +10,7 @@ export const projectData = [
       "A twitter clone with features like posting tweets, liking tweets, following users, and many more. Designed with modern web technologies, this app provides users with a familiar interface and seamless navigation.",
     "techStacks": [
       { id: 1, name: "Next.js" },
+      { id: 2, name: "React" },
       { id: 6, name: "Typescript" },
       { id: 3, name: "TailwindCSS" },
       { id: 4, name: "tRPC" },
@@ -17,7 +18,7 @@ export const projectData = [
     ],
     url: "https://tweet-seven.vercel.app/",
     repo: "https://github.com/shyamayadav154/tweet",
-    img: "https://i.imgur.com/uuZOIOQ.png",
+    img: "https://i.imgur.com/EoVbzAm.png",
   },
 
   {

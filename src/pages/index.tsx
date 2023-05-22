@@ -183,7 +183,7 @@ const ProjectCard = ({ project }: {
                 <Image
                     src={project.img}
                     width={500}
-                    className="flex-1 aspect-[16/10] object-left-top object-cover mx-auto w-full rounded-lg"
+                    className="flex-1 aspect-[16/10]  object-cover mx-auto w-full rounded-lg"
                     height={300}
                     alt={project.title}
                 />
@@ -212,7 +212,7 @@ const ProjectCard = ({ project }: {
                     </p>
                 </div>
             </section>
-            <section className="p-4 border-t border-zinc-600 flex justify-end gap-6">
+            <section className="px-4 pt-4 border-t border-zinc-600 flex justify-end gap-6">
                 <Link
                     target="_blank"
                     className="px-4 py-1.5 text-zinc-400 hover:text-zinc-300 hover:underline rounded"
