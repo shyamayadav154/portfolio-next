@@ -178,7 +178,7 @@ const ProjectCard = ({ project }: {
     project: ProjectCardProps;
 }) => {
     return (
-        <article className="rounded-xl p-5  text-zinc-300 flex  flex-col justify-between bg-zinc-800  overflow-hidden ">
+        <article className="rounded-xl bg-zinc-800 p-5  text-zinc-300 flex  flex-col justify-between card-gradient  overflow-hidden ">
             <section className="pb-5">
                 <Image
                     src={project.img}

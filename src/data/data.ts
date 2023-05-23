@@ -18,7 +18,7 @@ export const projectData = [
     ],
     url: "https://tweet-seven.vercel.app/",
     repo: "https://github.com/shyamayadav154/tweet",
-    img: "https://i.imgur.com/EoVbzAm.png",
+    img: "https://i.imgur.com/c6XuvOa.png",
   },
 
   {
