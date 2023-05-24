@@ -14,7 +14,7 @@ export const projectData = [
       { id: 6, name: "Typescript" },
       { id: 3, name: "TailwindCSS" },
       { id: 4, name: "tRPC" },
-      { id: 7, name: "Prisma" },
+      { id: 8, name: "MySQL" },
     ],
     url: "https://tweet-seven.vercel.app/",
     repo: "https://github.com/shyamayadav154/tweet",
