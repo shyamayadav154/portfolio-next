@@ -84,7 +84,7 @@ const HeroSection = () => {
           <Link target='_blank' href='https://github.com/shyamayadav154'>
             <AiFillGithub className='h-7 w-7 text-zinc-300 transition-all hover:scale-125 hover:text-zinc-100' />
           </Link>
-          <Link target='_blank' href='https://www.linkedin.com/in/shyamayadav154/'>
+          <Link target='_blank' href='https://www.linkedin.com/in/shyamanandy1/'>
             <AiFillLinkedin className='h-7 w-7 transition-all hover:scale-125 text-zinc-300 hover:text-zinc-100' />
           </Link>
         </div>
