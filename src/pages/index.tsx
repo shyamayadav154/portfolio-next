@@ -11,7 +11,7 @@ const ws = Work_Sans({
   subsets: ["latin"],
 });
 const resumeLink =
-  "https://drive.google.com/file/d/16_qtdy_R4wah_DEnXMPElsjCx9hd-SbJ/view?usp=sharing";
+  "https://drive.google.com/file/d/1qWfFcrZay2lUtoID7o2FJaZOgF-dS1Jb/view?usp=drive_link";
 
 export default function Home() {
   return (
