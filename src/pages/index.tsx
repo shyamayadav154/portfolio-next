@@ -67,7 +67,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           className='text-zinc-400 mt-6 '
         >
-          I am a fullstack developer with over 1 year of experience in building web applications. I
+          I am a fullstack developer with over 2 years of experience in building web applications. I
           am passionate about building scalable and maintainable web applications.
         </motion.p>
       </article>
